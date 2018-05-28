@@ -1,0 +1,31 @@
+#!/usr/bin/python
+import face_recognition
+import cv2
+
+# start a video capture in main camera
+video_capture = cv2.VideoCapture(0)
+
+# loop and check every frame
+while True:
+    # read video output
+    _, frame = video_capture.read()
+
+    # resize frame
+    frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
+
+    # check if face detected
+    has_face = True if face_recognition.face_locations(frame) else False
+
+    # print to see if face is detected
+    print(has_face)
+
+    # show video capture window
+    cv2.imshow('Manager Detector', frame)
+
+    # exit video capturing when key is hit
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# end video capturing
+video_capture.release()
+cv2.destroyAllWindows()
