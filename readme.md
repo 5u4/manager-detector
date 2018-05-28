@@ -6,9 +6,9 @@ Hide specific window when faces other than you are been detected. Inspired by [w
 
 ## How to use
 
-Make sure [opencv](https://pypi.org/project/opencv-python/) and [face_recognition](https://github.com/ageitgey/face_recognition) are 
-are installed.
-
 ```bash
-$ python detect
+$ python3 detect
 ```
+
+**Note**: [opencv](https://pypi.org/project/opencv-python/), [face_recognition](https://github.com/ageitgey/face_recognition),
+and a camera are required 😋.
