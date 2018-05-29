@@ -1,9 +1,35 @@
 #!/usr/bin/python
 import face_recognition
 import cv2
+from subprocess import call
+from cli import parse_argv
+import time
+
+# default settings
+default_settings = {
+    "work": "Mail",
+    "distraction": "Google Chrome",
+    "show": False,
+    "rest": 0.5
+}
+
+# get user input arguments
+arguments = parse_argv()
+
+
+# get value from arguments; if not set, get if from the default settings
+def option(opt):
+    global arguments, default_settings
+    if opt in arguments:
+        return arguments[opt]
+    else:
+        return default_settings[opt]
+
 
 # start a video capture in main camera
 video_capture = cv2.VideoCapture(0)
+
+resting = False
 
 # loop and check every frame
 while True:
@@ -16,11 +42,27 @@ while True:
     # check if face detected
     has_face = True if face_recognition.face_locations(frame) else False
 
-    # print to see if face is detected
-    print(has_face)
+    # show the video capture window and if face is found
+    if option('show'):
+        # print to see if face is detected
+        print(has_face)
 
-    # show video capture window
-    cv2.imshow('Manager Detector', frame)
+        # show video capture window
+        cv2.imshow('Manager Detector', frame)
+
+    # if face is detected
+    if has_face:
+        # bring up working app
+        call(['open', '-a', option('work')])
+        resting = False
+        # take a rest
+        time.sleep(option('rest'))
+
+    # when left
+    elif not resting:
+        # bring up other app
+        call(['open', '-a', option('distraction')])
+        resting = True
 
     # exit video capturing when key is hit
     if cv2.waitKey(1) & 0xFF == ord('q'):
