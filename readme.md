@@ -2,7 +2,7 @@
 
 ## Description
 
-Hide specific window when faces other than you are been detected. Inspired by [weibo post](http://fx.weico.cc/share/24272383.html?weibo_id=4242250063517925).
+Hide specific window when faces other than you are been detected. Inspired by [weibo post](post).
 
 *Works only on mac.*
 
