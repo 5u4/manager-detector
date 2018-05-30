@@ -17,11 +17,12 @@ and a camera are required 😋.
 
 ### Options
 
- - work: the name of the working app (default: Mail)
- - leis: the name of the leisure app (default: Google Chrome)
- - show: display video capture and face found (default: False)
- - rest: the time (s) between switching work and distraction (default: 0.5)
- - safe: when enabled, it will not switch back to leisure app when other faces disappear (default: True)
+ - `work`: the name of the working app (default: Mail)
+ - `leis`: the name of the leisure app (default: Google Chrome)
+ - `show`: display video capture and face found (default: False)
+ - `rest`: the time (s) between switching work and distraction (default: 0.5)
+ - `safe`: when enabled, it will not switch back to leisure app when other faces disappear (default: True)
+ - `rate`: video capture rate; calculate 1 frame in <rate> of frames (min: 1) (default: 5)
 
 **Example**
 

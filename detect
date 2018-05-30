@@ -11,8 +11,16 @@ video_capture = cv2.VideoCapture(0)
 # check if is on rest
 resting = False
 
+frame_counts = 0
+
 # loop and check every frame
 while True:
+    frame_counts += 1
+
+    # skip some frames
+    if frame_counts % option('rate') != 0:
+        continue
+
     # read video output
     _, frame = video_capture.read()
 

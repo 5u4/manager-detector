@@ -4,11 +4,12 @@ from os import walk
 
 # default settings
 default_settings = {
-    "work": "Mail",
-    "leis": "Google Chrome",
-    "show": False,
-    "rest": 0.5,
-    "safe": True,
+    "work": "Mail",           # the name of the working app
+    "leis": "Google Chrome",  # the name of the leisure app
+    "show": False,            # display video capture and face found
+    "rest": 0.5,              # the time (s) between switching work and distraction
+    "safe": True,             # when enabled, it will not switch back to leisure app when other faces disappear
+    "rate": 5,                # video capture rate; calculate 1 frame in <rate> of frames (min: 1)
 }
 
 # get user input arguments
