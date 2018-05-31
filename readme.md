@@ -6,6 +6,10 @@ Hide specific window when faces other than you are been detected. Inspired by [w
 
 *Works only on mac.*
 
+![demo](demo.gif)
+
+*Has some lag since processing image takes time*
+
 ## How to use
 
 ```bash
