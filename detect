@@ -27,6 +27,9 @@ while True:
     # resize frame
     small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
 
+    # convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
+    small_frame = small_frame[:, :, ::-1]
+
     # get face locations
     face_locations = face_recognition.face_locations(small_frame)
     face_encodings = face_recognition.face_encodings(small_frame, face_locations)
