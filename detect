@@ -13,6 +13,9 @@ resting = False
 
 frame_counts = 0
 
+# Warning
+print('WARNING: Using it at inappropriate occasions bears your own consequences.')
+
 # loop and check every frame
 while True:
     frame_counts += 1

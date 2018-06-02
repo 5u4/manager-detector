@@ -10,6 +10,10 @@ Hide specific window when faces other than you are been detected. Inspired by [w
 
 *Has some lag since processing image takes time*
 
+A solution of lagging is to connect to a camera (cctv) that check people before seeing your screen.
+
+**IMPORTANT**: This project is made for fun, please do not use it during working.
+
 ## How to use
 
 ```bash
