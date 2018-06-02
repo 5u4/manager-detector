@@ -31,6 +31,7 @@ and a camera are required 😋.
  - `rest`: the time (s) between switching work and distraction (default: 0.5)
  - `safe`: when enabled, it will not switch back to leisure app when other faces disappear (default: True)
  - `rate`: video capture rate; calculate 1 frame in <rate> of frames (min: 1) (default: 5)
+ - `came`: the camera that is used in monitoring (default: 0)
 
 **Example**
 

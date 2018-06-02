@@ -6,7 +6,7 @@ import time
 from services import option, is_ignored_faces
 
 # start a video capture in main camera
-video_capture = cv2.VideoCapture(0)
+video_capture = cv2.VideoCapture(option('came'))
 
 # check if is on rest
 resting = False

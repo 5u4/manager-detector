@@ -10,6 +10,7 @@ default_settings = {
     "rest": 0.5,              # the time (s) between switching work and distraction
     "safe": True,             # when enabled, it will not switch back to leisure app when other faces disappear
     "rate": 5,                # video capture rate; calculate 1 frame in <rate> of frames (min: 1)
+    "came": 0,                # the camera that is used in monitoring
 }
 
 # get user input arguments
